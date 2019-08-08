@@ -1,6 +1,7 @@
 package org.academiadecodigo.whiledlings.hackathon.persistence.dao;
 
 import org.academiadecodigo.whiledlings.hackathon.persistence.model.Post;
+import org.academiadecodigo.whiledlings.hackathon.persistence.model.UserModel;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,8 +26,8 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public UserModel saveOrUpdate(UserModel userModel {
-        return em.merge(UserModel);
+    public UserModel saveOrUpdate(UserModel userModel) {
+        return em.merge(userModel);
     }
 
     @Override
