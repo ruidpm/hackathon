@@ -15,6 +15,7 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.util.List;
 
 
 @RestController
@@ -34,6 +35,12 @@ public class TestController {
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
+
+    @RequestMapping(method = RequestMethod.GET, path = {"/posts"})
+    public ResponseEntity<List<Post>> listQuotess()
+    {
+        return new ResponseEntity(postService.getAllPosts(),HttpStatus.OK);
+    }
 
 
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})

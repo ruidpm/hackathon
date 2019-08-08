@@ -37,6 +37,6 @@ public class PostDaoImpl implements PostDao{
 
     @Override
     public List<Post> listAll() {
-        return null;
+        return em.createQuery( "FROM Post", Post.class).getResultList();
     }
 }
