@@ -3,7 +3,9 @@ package org.academiadecodigo.whiledlings.hackathon.services;
 import org.academiadecodigo.whiledlings.hackathon.persistence.dao.PostDao;
 import org.academiadecodigo.whiledlings.hackathon.persistence.model.Post;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PostServiceImpl implements PostService {
 
     private PostDao postDao;
