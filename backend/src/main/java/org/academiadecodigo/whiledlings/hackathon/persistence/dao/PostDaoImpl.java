@@ -18,8 +18,8 @@ public class PostDaoImpl implements PostDao{
     }
 
     @Override
-    public void saveOrUpdate(Post post) {
-        em.merge(Post);
+    public Post saveOrUpdate(Post post) {
+        return em.merge(Post);
     }
 
     @Override

@@ -4,7 +4,7 @@ public interface PostDao {
 
     void delete (Integer id);
 
-    void saveOrUpdate (Post post);
+    Post saveOrUpdate (Post post);
 
     Post findById (Integer id);
 
