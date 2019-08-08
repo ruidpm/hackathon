@@ -1,18 +1,21 @@
 package org.academiadecodigo.whiledlings.hackathon.persistence.dao;
 
 import org.academiadecodigo.whiledlings.hackathon.persistence.model.Post;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
+@Transactional
 @Repository
 public class PostDaoImpl implements PostDao{
 
+    @PersistenceContext
     private EntityManager em;
 
-    @PersistenceContext
     public void setEm(EntityManager em) {
         this.em = em;
     }

@@ -18,14 +18,14 @@ import javax.validation.Valid;
 
 
 @RestController
-@RequestMapping("/api/hackathon")
+@RequestMapping("/api")
 public class TestController {
 
-    @Autowired
     public void setPostService(PostService postService) {
         this.postService = postService;
     }
 
+    @Autowired
     private PostService postService;
 
         @RequestMapping(method = RequestMethod.GET, path = {"/", ""})
@@ -37,7 +37,8 @@ public class TestController {
 
 
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity<?> addCustomer(@Valid @RequestBody Post post, BindingResult bindingResult, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<?> addCustomer(@RequestBody Post post) {
+
 
         Post savedPost = postService.savePost(post);
 
@@ -45,4 +46,4 @@ public class TestController {
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-    }
+}
