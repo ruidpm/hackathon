@@ -9,6 +9,12 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.see-more {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 
 .the-cards {
   margin: 15px;
