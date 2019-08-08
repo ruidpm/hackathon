@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/post")
 public class RestPostCtrl {
 
     private PostService postService;
@@ -27,7 +27,7 @@ public class RestPostCtrl {
         return new ResponseEntity(postService.getAllPosts(),HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"post/{id}"})
+    @RequestMapping(method = RequestMethod.GET, path = {"/{id}"})
     public ResponseEntity<Post> getPostById(@PathVariable Integer id){
         
        return new ResponseEntity(postService.getPost(id), HttpStatus.OK);
