@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "crowdpost")
-public class CrowdPost extends AbstractPost {
+public class CrowdPost extends AbstractModel {
 
     @ManyToOne
     private UserModel userModel;
