@@ -1,0 +1,53 @@
+
+#missing-image{
+    height: 300px;
+
+}
+
+#crowd-image{
+    height: 300px;
+    
+
+}
+
+#crowd-desc{
+    background-color: #E3E8F0;
+}
+
+#missing-desc{
+    background-color: #E3E8F0;
+}
+
+.col-lg-2 {
+    display: table;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+  }
+
+.options{
+      padding: 70px;
+  }
+
+h1 {
+      text-align: center;
+      font-size: 110px;
+      color: #8b3140;
+  }
+
+  #intro{
+    height: 500px;
+    background-image: url("../../assets/mosaic.png");
+  }
+
+  #end{
+    background-color: #414754;
+  }
+
+  .jumbotron { 
+    margin-bottom: 0;
+}
+
+
+
+
