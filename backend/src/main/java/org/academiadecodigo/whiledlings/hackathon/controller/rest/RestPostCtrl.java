@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class RestCtrl {
+public class RestPostCtrl {
 
     private PostService postService;
 
@@ -22,7 +22,7 @@ public class RestCtrl {
 
 
     @RequestMapping(method = RequestMethod.GET, path = {"/posts"})
-    public ResponseEntity<List<Post>> listQuotess()
+    public ResponseEntity<List<Post>> listPosts()
     {
         return new ResponseEntity(postService.getAllPosts(),HttpStatus.OK);
     }
@@ -35,7 +35,7 @@ public class RestCtrl {
 
 
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity<?> addCustomer(@RequestBody Post post) {
+    public ResponseEntity<?> addPost(@RequestBody Post post) {
 
         Post savedPost = postService.savePost(post);
         return new ResponseEntity<>(HttpStatus.CREATED);
