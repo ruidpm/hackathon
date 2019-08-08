@@ -48,4 +48,6 @@ public class RestCtrl {
         postService.deletePost(id);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
 }
