@@ -31,6 +31,7 @@ body{
 }
 .seemore{
     background-color: #414754;
+   
     border: none;
     color: white;
     padding: 15px 32px;
@@ -39,7 +40,12 @@ body{
     display: inline-block;
     font-size: 16px;
     border-radius: 8px;
+    cursor: pointer;
 }
+.seemore:hover{
+background-color: #333741;
+}
+
 @media (min-width: 544px) {  
     .title{
         padding-top: 100px;
