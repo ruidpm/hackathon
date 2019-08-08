@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "user")
-public class UserModel extends AbstractUserModel {
+public class UserModel extends AbstractModel {
 
 
     private String firstName;
@@ -20,6 +20,8 @@ public class UserModel extends AbstractUserModel {
 
     @OneToMany(
             cascade = {CascadeType.ALL},
+
+            mappedBy = "user",
 
             orphanRemoval = true,
 
