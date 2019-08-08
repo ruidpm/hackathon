@@ -32,6 +32,7 @@ public class PostDaoImpl implements PostDao{
 
     @Override
     public Post findById(Integer id) {
+
         return em.find(Post.class, id);
     }
 
