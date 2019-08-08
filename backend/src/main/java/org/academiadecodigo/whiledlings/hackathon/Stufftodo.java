@@ -1,6 +1,5 @@
 package org.academiadecodigo.whiledlings.hackathon;
 
-import org.academiadecodigo.whiledlings.hackathon.persistence.dao.PostDaoImpl;
 import org.academiadecodigo.whiledlings.hackathon.services.EmailServiceImpl;
 
 public class Stufftodo {
@@ -18,6 +17,6 @@ public class Stufftodo {
 
         EmailServiceImpl mail = new EmailServiceImpl();
         mail.setJavaMailSender(mail.getJavaMailSender());
-        mail.sendSimpleMessage("pedromsalbur@gmail.com", "test", "test");
+       // mail.sendSimpleMessage("pedromsalbur@gmail.com", "test", "test");
     }
 }

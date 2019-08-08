@@ -8,35 +8,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-@Transactional
 @Repository
-public class PostDaoImpl implements PostDao{
+public class PostDaoImpl extends GenericDao<Post> implements PostDao{
 
-    @PersistenceContext
-    private EntityManager em;
-
-    public void setEm(EntityManager em) {
-        this.em = em;
-    }
-
-    @Override
-    public void delete(Integer id) {
-        em.remove(em.find(Post.class, id));
-    }
-
-    @Override
-    public Post saveOrUpdate(Post post) {
-        return em.merge(post);
-    }
-
-    @Override
-    public Post findById(Integer id) {
-
-        return em.find(Post.class, id);
-    }
-
-    @Override
-    public List<Post> listAll() {
-        return em.createQuery( "FROM Post", Post.class).getResultList();
+    public PostDaoImpl() {
+        super(Post.class);
     }
 }

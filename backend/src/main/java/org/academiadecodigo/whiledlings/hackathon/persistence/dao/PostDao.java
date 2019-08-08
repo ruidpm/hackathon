@@ -4,13 +4,6 @@ import org.academiadecodigo.whiledlings.hackathon.persistence.model.Post;
 
 import java.util.List;
 
-public interface PostDao {
+public interface PostDao extends Dao<Post>{
 
-    void delete (Integer id);
-
-    Post saveOrUpdate (Post post);
-
-    Post findById (Integer id);
-
-    List<Post> listAll();
 }
