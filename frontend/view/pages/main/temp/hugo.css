@@ -1,0 +1,69 @@
+.masthead {
+    height: 100%;
+    width: 100%
+    min-height: 500px;
+    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+audio { 
+    display:none;
+}
+.title{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 4em;
+}
+.introtext{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 1.4em;
+}
+.seemore{
+    padding-bottom: 45%;
+}
+@media (min-width: 544px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 4em;
+    }
+  }
+.muteimage{
+    width: 20px;
+    height: 20px;
+}
+.playimage{
+    width: 19px;
+    height: 19px;
+}
+
+  @media (min-width: 768px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 4.5em;
+    }
+  }
+   
+
+  @media (min-width: 992px) { 
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 5em;
+    }
+  }
+   
+
+  @media (min-width: 1200px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 5em;
+    }  
+  }
+
+overflow: hidden;
