@@ -1,7 +1,10 @@
 package org.academiadecodigo.whiledlings.hackathon.persistence.dao;
 
+import org.academiadecodigo.whiledlings.hackathon.persistence.model.Post;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 public class PostDaoImpl implements PostDao{
 
@@ -19,7 +22,7 @@ public class PostDaoImpl implements PostDao{
 
     @Override
     public Post saveOrUpdate(Post post) {
-        return em.merge(Post);
+        return em.merge(post);
     }
 
     @Override
