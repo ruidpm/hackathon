@@ -1,25 +1,30 @@
 .masthead {
     height: 100%;
-    width: 100%
+    width: 100%;
     min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 audio { 
     display:none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/hug.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .title{
     padding-top: 100px;
     text-align: center;
     font-size: 4em;
+    color: white;
 }
 .introtext{
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
     font-size: 1.4em;
+    color: white;
 }
 .seemore{
     padding-bottom: 45%;
