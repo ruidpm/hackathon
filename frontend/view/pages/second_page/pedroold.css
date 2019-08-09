@@ -1,0 +1,114 @@
+
+#missing-image{
+    height: 300px;
+
+}
+
+#crowd-image{
+    height: 300px;
+    
+
+}
+
+#crowd-desc{
+    background-color: #E3E8F0;
+}
+
+#missing-desc{
+    background-color: #E3E8F0;
+}
+
+.col-lg-2 {
+    display: table;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+  }
+
+.options{
+      padding-top: 70px;
+
+  }
+.card{
+  width: 15rem;
+}
+h1{
+  font-size: 3.5em;
+  color: #8b3140;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 110px;
+  }
+}
+
+
+  #intro{
+    height: 500px;
+    background-image: url("../../assets/mosaic.png");
+  }
+
+  #end{
+    background-color: #414754;
+  }
+
+  .jumbotron { 
+    margin-bottom: 0;
+  }
+  
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #414754;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    position: absolute;
+    left: -40px;
+    top: 55px;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: -40px;
+    top: 55px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #2d313a;}
+
+  .hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
