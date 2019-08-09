@@ -12,9 +12,14 @@ h1 {
   align-items: center;
 }
 form {
-  outline: 0;
+  padding-left: 10%;
+  padding-block-start: 3%;
+  padding-right: 10%;
 }
 
+button {
+  margin-top: 20px;
+}
 @media only screen and (max-width: 600px) {
   .main-header {
     height: 90px;
