@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 //alert(localStorage.getItem("storageName"));
 
-$('.btn-primary').click(function () {
+$('.contact-form-id').click(function () {
 
     add();
 });
