@@ -18,7 +18,8 @@ public class PostDtoToPostConverter {
 
     public Post converter(PostDto postDto) {
 
-        Post post = (postDto.getId() != null ? postService.getPost(postDto.getId()) : new Post());
+        Post post = (postDto.getId() != null ?
+                postService.getPost(postDto.getId()) : new Post());
 
         post.setTitle(postDto.getTitle());
         post.setMessage(postDto.getMessage());

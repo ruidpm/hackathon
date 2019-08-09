@@ -1,21 +1,18 @@
 package org.academiadecodigo.whiledlings.hackathon.persistence.model;
 
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-/**
- * Model for simple Post
- */
-
 @Entity
-@Table(name = "post")
-public class Post extends AbstractModel {
+@Table(name = "crowdpost")
+public class CrowdPost extends AbstractModel {
 
     private String message;
     private String title;
     private String email;
     private String url;
+    private Integer moneyNeeded;
+    private Integer moneyDonated;
 
 
     public String getUrl() {
@@ -50,4 +47,21 @@ public class Post extends AbstractModel {
         this.title = title;
     }
 
+    public Integer getMoneyNeeded() {
+        return moneyNeeded;
+    }
+
+    public void setMoneyNeeded(Integer moneyNeeded) {
+        this.moneyNeeded = moneyNeeded;
+    }
+
+    public Integer getMoneyDonated() {
+        return moneyDonated;
+    }
+
+    public void setMoneyDonated(Integer moneyDonated) {
+        this.moneyDonated = moneyDonated;
+    }
 }
+
+
