@@ -23,9 +23,6 @@ public class RestEmailCtrl {
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
     public ResponseEntity<?> sendMail(@RequestBody EmailPojo emailPojo) {
 
-        //emailService.sendSimpleMessage(postService.getPost(emailPojo.getId()).getEmail()
-                //,emailPojo.getSubject(),emailPojo.getMessage());
-
         emailService.sendMessage(emailPojo);
 
         return new ResponseEntity<>(HttpStatus.CREATED);

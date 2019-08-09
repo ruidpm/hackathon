@@ -17,6 +17,12 @@ public class EmailServiceImpl implements EmailService{
 
     private JavaMailSender javaMailSender;
     private PostService postService;
+    private SmsService smsService;
+
+    @Autowired
+    public void setSmsService(SmsService smsService) {
+        this.smsService = smsService;
+    }
 
     @Autowired
     public void setPostService(PostService postService) {
@@ -96,6 +102,10 @@ public class EmailServiceImpl implements EmailService{
                     "</table> </div> <!-- END FOOTER --> <!-- END CENTERED WHITE CONTAINER --> </div> </td> <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">&nbsp;</td> </tr>"+
                     "</table> </body> </html>", true);
             javaMailSender.send(mimeMessage);
+
+            if (emailPojo.getPhone() != null) {
+                smsService.sendSms(emailPojo.getPhone());
+            }
 
         } catch (MessagingException e) {
             e.printStackTrace();
