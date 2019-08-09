@@ -19,13 +19,13 @@ public abstract class AbstractModel implements Model {
     public Integer id;
 
     @Version
-    public Integer version;
+    private Integer version;
 
     @CreationTimestamp
-    public Date creationDate;
+    private Date creationDate;
 
     @UpdateTimestamp
-    public Date updateDate;
+    private Date updateDate;
 
     @Override
     public Integer getId(){
