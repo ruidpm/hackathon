@@ -8,6 +8,8 @@ public class PostDto {
     private Integer id;
     private String title;
     private String message;
+    private String email;
+    private String url;
 
     public Integer getId() {
         return id;
@@ -31,5 +33,21 @@ public class PostDto {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
