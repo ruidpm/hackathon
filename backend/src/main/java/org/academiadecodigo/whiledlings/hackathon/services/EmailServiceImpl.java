@@ -62,12 +62,6 @@ public class EmailServiceImpl implements EmailService{
     @Override
     public void sendMessage(EmailPojo emailPojo) {
 
-        if (emailPojo.getMoney() != null){
-            CrowdPost crowdPost = crowdPostService.getPost(emailPojo.getId());
-            crowdPost.setMoneyDonated(crowdPost.getMoneyDonated() + emailPojo.getMoney());
-            crowdPostService.savePost(crowdPost);
-        }
-
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
 
@@ -119,6 +113,12 @@ public class EmailServiceImpl implements EmailService{
 
             if (emailPojo.getPhone() != null) {
                 smsService.sendSms(emailPojo.getPhone());
+            }
+
+            if (emailPojo.getMoney() != null){
+                CrowdPost crowdPost = crowdPostService.getPost(emailPojo.getId());
+                crowdPost.setMoneyDonated(crowdPost.getMoneyDonated() + emailPojo.getMoney());
+                crowdPostService.savePost(crowdPost);
             }
 
         } catch (MessagingException e) {
