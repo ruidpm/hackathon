@@ -1,6 +1,5 @@
 const apiURL = "http://localhost:8080/hackathon/api/post/posts";
 
-
 function successCallback(response) {
   // do something with the data
   let person = response;
@@ -35,16 +34,7 @@ function successCallback(response) {
 
   for (let index = 0; index < buttons.length; index++) {
     $(`#user${index + 1}`).click(function() {
-
-      $(".modal-body").text(person[index].message + " "+(index+1));
-
-
-      $("#contact").click(function() {
-        alert(index+1);
-        //var getInput = prompt("2");
-        localStorage.setItem("storageName",index+1);
-      });
-
+      $(".modal-body").text(person[index].message);
     });
   }
 }
@@ -61,8 +51,6 @@ $.ajax({
   success: successCallback,
   error: errorCallback
 });
-
-
 
 /* let person = [
   {

@@ -1,0 +1,30 @@
+h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-family: "Lacquer", sans-serif;
+}
+
+.main-header {
+  background: gray;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  padding-left: 10%;
+  padding-block-start: 3%;
+  padding-right: 10%;
+}
+
+button {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .main-header {
+    height: 90px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
