@@ -34,7 +34,7 @@ function successCallback(response) {
 
   for (let index = 0; index < buttons.length; index++) {
     $(`#user${index + 1}`).click(function() {
-      $(".modal-body").text(person[index].description);
+      $(".modal-body").text(person[index].message);
     });
   }
 }

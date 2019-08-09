@@ -5,8 +5,7 @@ $(document).ready(function() {
   }
 
   function errorCallback(request, status, error) {
-    alert("error");
-    console.log(error);
+    alert("Create");
   }
 
   function add() {
