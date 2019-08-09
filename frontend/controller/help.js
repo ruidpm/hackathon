@@ -1,33 +1,33 @@
 let person = [
   {
+    id: 1,
     name: "Thiago Tavares",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Thiago Description"
   },
   {
+    id: 2,
     name: "Rui Magalhães",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Rui description"
   },
   {
+    id: 3,
     name: "Hugo Monteiro",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Hugo Description"
   },
   {
+    id: 4,
     name: "Pedro Albuquerque",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Pedro description"
   },
   {
+    id: 5,
     name: "Bruno Alves",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Bruno description"
   },
   {
+    id: 6,
     name: "João Faustino",
-    description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    description: "Faustino description"
   }
 ];
 
@@ -43,10 +43,12 @@ person.forEach(element => {
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${element.name}</h5>
-        <p class="card-text">${element.description}
+        <p class="card-text">${element.description.slice(0, 50)}
         </p>
         <p class="card-text">
-          <small class="text-muted">    <button class="see-more shadow-none" data-toggle="modal" data-target="#exampleModalCenter">
+          <small class="text-muted">    <button id="user${
+            element.id
+          }" class="see-more shadow-none" data-toggle="modal" data-target="#exampleModalCenter">
           See more...
         </button></small>
         </p>
@@ -57,6 +59,21 @@ person.forEach(element => {
 </div>`;
   $(".main-cards").append(card);
 });
+
+let buttons = $(".see-more");
+console.log(person[1].description);
+
+for (let index = 0; index < buttons.length; index++) {
+  $(`#user${index + 1}`).click(function() {
+    $(".modal-body").text(person[index].description);
+  });
+}
+
+/*buttons.forEach(element => {
+  $("#user1").click(function() {
+    alert("The paragraph was clicked." + element.id);
+  });
+});*/
 /* 
 var card = `<div class="the-cards">
 <div class="card mb-3" style="max-width: 540px;">
