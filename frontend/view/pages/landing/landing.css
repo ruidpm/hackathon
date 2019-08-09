@@ -1,0 +1,93 @@
+.masthead {
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+  }
+audio { 
+    display:none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/hug.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 4em;
+    color: #8b3140;
+}
+.introtext{
+   position: absolute;
+   top: 80%;
+   left: 35%;
+    text-align: center;
+    font-size: 1.2em;
+    color: goldenrod;
+    font-style: oblique;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-top: 40px;   
+}
+.seemore{
+    background-color: #414754;
+   
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.seemore:hover{
+background-color: #333741;
+}
+
+@media (min-width: 544px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 4em;
+    }
+  }
+.muteimage{
+    width: 20px;
+    height: 20px;
+}
+.playimage{
+    width: 19px;
+    height: 19px;
+}
+
+  @media (min-width: 768px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 5em;
+    }
+  }
+   
+
+  @media (min-width: 992px) { 
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 7em;
+    }
+  }
+   
+
+  @media (min-width: 1200px) {  
+    .title{
+        padding-top: 100px;
+        text-align: center;
+        font-size: 9em;
+    } 
+
+
+  }
+
