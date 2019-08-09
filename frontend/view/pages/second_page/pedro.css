@@ -26,14 +26,23 @@
   }
 
 .options{
-      padding: 70px;
-  }
+      padding-top: 70px;
 
-h1 {
-      text-align: center;
-      font-size: 110px;
-      color: #8b3140;
   }
+.card{
+  width: 15rem;
+}
+h1{
+  font-size: 3.5em;
+  color: #8b3140;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 110px;
+  }
+}
+
 
   #intro{
     height: 500px;
@@ -46,7 +55,8 @@ h1 {
 
   .jumbotron { 
     margin-bottom: 0;
-}
+  }
+  
 
 /* Dropdown Button */
 .dropbtn {
