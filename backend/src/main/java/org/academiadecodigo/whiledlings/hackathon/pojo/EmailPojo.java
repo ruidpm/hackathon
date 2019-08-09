@@ -2,12 +2,12 @@ package org.academiadecodigo.whiledlings.hackathon.pojo;
 
 public class EmailPojo {
 
-    private String destinatary;
+    private Integer id;
     private String subject;
     private String message;
 
-    public String getDestinatary() {
-        return destinatary;
+    public Integer getId() {
+        return id;
     }
 
     public String getSubject() {

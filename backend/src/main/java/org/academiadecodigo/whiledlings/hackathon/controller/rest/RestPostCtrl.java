@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/post")
 public class RestPostCtrl {
@@ -42,7 +43,7 @@ public class RestPostCtrl {
     }
 
 
-    @RequestMapping(method = RequestMethod.DELETE, path = {"delete{id}"})
+    @RequestMapping(method = RequestMethod.DELETE, path = {"/delete{id}"})
     public ResponseEntity deletePost(@PathVariable Integer id){
 
         postService.deletePost(id);
