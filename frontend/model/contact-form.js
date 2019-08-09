@@ -32,11 +32,6 @@ $(document).ready(function () {
         error: errorCallback
     });
 
-    console.log(localStorage.getItem("storageName"));
-    console.log($('#name').val());
-    console.log($('#a').val());
-    console.log($('#phone').val());
-
 
 }
 
@@ -44,7 +39,6 @@ $(document).ready(function () {
 
 $('.btn-primary').click(function () {
 
-    console.log("batata")
     add();
 });
 

@@ -1,11 +1,12 @@
 h1 {
   font-size: 80px;
-  text-transform: uppercase;
-  font-family: "Lacquer", sans-serif;
+  /*text-transform: uppercase;
+  font-family: "Lacquer", sans-serif;*/
+  color: #8b3140
 }
 
 .main-header {
-  background: gray;
+  background: rgb(204, 204, 204);
   height: 200px;
   display: flex;
   justify-content: center;

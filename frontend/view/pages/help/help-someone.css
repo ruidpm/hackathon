@@ -5,22 +5,30 @@ h1 {
   color: #8b3140
 }
 
+.main-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.see-more {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.the-cards {
+  margin: 15px;
+}
+
 .main-header {
-  background:rgb(204, 204, 204);
+  background: rgb(204, 204, 204);
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-form {
-  padding-left: 10%;
-  padding-block-start: 3%;
-  padding-right: 10%;
-}
 
-button {
-  margin-top: 20px;
-}
 @media only screen and (max-width: 600px) {
   .main-header {
     height: 90px;
