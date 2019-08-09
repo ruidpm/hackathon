@@ -17,6 +17,11 @@ h1 {
   outline: none;
 }
 
+h2 {
+  text-align: center;
+  padding: 40px;
+}
+
 .the-cards {
   margin: 15px;
 }

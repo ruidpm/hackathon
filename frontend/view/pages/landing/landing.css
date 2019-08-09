@@ -20,14 +20,15 @@ body{
     color: #8b3140;
 }
 .introtext{
-    padding-top: 40px;
-    padding-bottom: 40px;
+   position: absolute;
+   top: 80%;
+   left: 35%;
     text-align: center;
     font-size: 1.2em;
     color: goldenrod;
     font-style: oblique;
     font-family: Verdana, Geneva, sans-serif;
-    
+    margin-top: 40px;   
 }
 .seemore{
     background-color: #414754;

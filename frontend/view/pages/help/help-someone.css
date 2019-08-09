@@ -5,6 +5,10 @@ h1 {
   color: #8b3140
 }
 
+h2 {
+  text-align: center;
+  padding: 40px;
+}
 .main-cards {
   display: flex;
   flex-wrap: wrap;
