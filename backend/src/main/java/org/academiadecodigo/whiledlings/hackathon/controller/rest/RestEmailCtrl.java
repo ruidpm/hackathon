@@ -2,7 +2,6 @@ package org.academiadecodigo.whiledlings.hackathon.controller.rest;
 
 import org.academiadecodigo.whiledlings.hackathon.pojo.EmailPojo;
 import org.academiadecodigo.whiledlings.hackathon.services.EmailService;
-import org.academiadecodigo.whiledlings.hackathon.services.EmailServiceImpl;
 import org.academiadecodigo.whiledlings.hackathon.services.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

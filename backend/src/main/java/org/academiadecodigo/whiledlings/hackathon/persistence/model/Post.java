@@ -13,10 +13,18 @@ import javax.persistence.Table;
 public class Post extends AbstractModel {
 
     private String message;
-
     private String title;
-
     private String email;
+    private String url;
+
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getEmail() {
         return email;
