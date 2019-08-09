@@ -43,6 +43,8 @@ public class EmailServiceImpl implements EmailService{
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(to);
         message.setSubject(subject);
+
+
         message.setText(text);
         javaMailSender.send(message);
     }

@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api")
-public class RestCtrl {
+@RequestMapping("/api/post")
+public class RestPostCtrl {
 
     private PostService postService;
 
@@ -22,12 +23,12 @@ public class RestCtrl {
 
 
     @RequestMapping(method = RequestMethod.GET, path = {"/posts"})
-    public ResponseEntity<List<Post>> listQuotess()
+    public ResponseEntity<List<Post>> listPosts()
     {
         return new ResponseEntity(postService.getAllPosts(),HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = {"post/{id}"})
+    @RequestMapping(method = RequestMethod.GET, path = {"/{id}"})
     public ResponseEntity<Post> getPostById(@PathVariable Integer id){
         
        return new ResponseEntity(postService.getPost(id), HttpStatus.OK);
@@ -35,14 +36,14 @@ public class RestCtrl {
 
 
     @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
-    public ResponseEntity<?> addCustomer(@RequestBody Post post) {
+    public ResponseEntity<?> addPost(@RequestBody Post post) {
 
         Post savedPost = postService.savePost(post);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
 
-    @RequestMapping(method = RequestMethod.DELETE, path = {"delete{id}"})
+    @RequestMapping(method = RequestMethod.DELETE, path = {"/delete{id}"})
     public ResponseEntity deletePost(@PathVariable Integer id){
 
         postService.deletePost(id);
