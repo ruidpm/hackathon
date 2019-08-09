@@ -6,9 +6,14 @@ public class EmailPojo {
     private String subject;
     private String message;
     private String phone;
+    private Integer money;
 
     public String getPhone() {
         return phone;
+    }
+
+    public Integer getMoney() {
+        return money;
     }
 
     public Integer getId() {

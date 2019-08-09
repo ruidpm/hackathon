@@ -1,5 +1,6 @@
 package org.academiadecodigo.whiledlings.hackathon.services;
 
+import org.academiadecodigo.whiledlings.hackathon.persistence.model.CrowdPost;
 import org.academiadecodigo.whiledlings.hackathon.pojo.EmailPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,12 @@ public class EmailServiceImpl implements EmailService{
     private JavaMailSender javaMailSender;
     private PostService postService;
     private SmsService smsService;
+    private CrowdPostService crowdPostService;
+
+    @Autowired
+    public void setCrowdPostService(CrowdPostService crowdPostService) {
+        this.crowdPostService = crowdPostService;
+    }
 
     @Autowired
     public void setSmsService(SmsService smsService) {
@@ -54,6 +61,13 @@ public class EmailServiceImpl implements EmailService{
 
     @Override
     public void sendMessage(EmailPojo emailPojo) {
+
+        if (emailPojo.getMoney() != null){
+            CrowdPost crowdPost = crowdPostService.getPost(emailPojo.getId());
+            crowdPost.setMoneyDonated(crowdPost.getMoneyDonated() + emailPojo.getMoney());
+            crowdPostService.savePost(crowdPost);
+        }
+
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage);
 
