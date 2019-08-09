@@ -26,7 +26,7 @@
     <context-param>
         <param-name>spring.profiles.active</param-name>
         <!-- define spring profile below -->
-        <param-value>prod</param-value>   <!-- mysql only -->
+        <param-value>h2</param-value>   <!-- mysql only -->
     </context-param>
 
 </web-app>
