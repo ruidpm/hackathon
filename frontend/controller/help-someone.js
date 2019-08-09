@@ -1,11 +1,13 @@
-const apiURL = "http://localhost:8080/hackathon/api/post/posts";
+const apiURL = "http://localhost:8080/hackathon/api/crowdpost/crowdposts";
 
 
 function successCallback(response) {
   // do something with the data
   let person = response;
   person.forEach(element => {
-    var card = `<div class="the-cards">
+
+    
+      var card = `<div class="the-cards">
   <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -14,7 +16,7 @@ function successCallback(response) {
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">${element.title}</h5>
-          <p class="card-text">${element.message.slice(0, 50)}
+          <p class="card-text">${element.message}
           </p>
           <p class="card-text">
             <small class="text-muted">    <button id="user${
@@ -28,7 +30,7 @@ function successCallback(response) {
     </div>
   </div>
   </div>`;
-    $(".main-cards").append(card);
+    $(".main-cards").append(card);  
   });
 
   let buttons = $(".see-more");
@@ -36,7 +38,7 @@ function successCallback(response) {
   for (let index = 0; index < buttons.length; index++) {
     $(`#user${index + 1}`).click(function() {
 
-      $(".modal-body").text(person[index].message + " "+(index+1));
+      $(".modal-body").text(person[index].message+" - Money Needed: "+person[index].moneyNeeded);
 
 
       $("#contact").click(function() {
