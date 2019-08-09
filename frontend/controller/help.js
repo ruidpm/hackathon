@@ -1,4 +1,58 @@
-let person = [
+const apiURL = "http://localhost:8080/hackathon/api/post/posts";
+
+function successCallback(response) {
+  // do something with the data
+  let person = response;
+  person.forEach(element => {
+    var card = `<div class="the-cards">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="../../assets/avatar.jpg" class="card-img" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">${element.title}</h5>
+          <p class="card-text">${element.message.slice(0, 50)}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">    <button id="user${
+              element.id
+            }" class="see-more shadow-none" data-toggle="modal" data-target="#exampleModalCenter">
+            See more...
+          </button></small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>`;
+    $(".main-cards").append(card);
+  });
+
+  let buttons = $(".see-more");
+
+  for (let index = 0; index < buttons.length; index++) {
+    $(`#user${index + 1}`).click(function() {
+      $(".modal-body").text(person[index].description);
+    });
+  }
+}
+
+function errorCallback(request, status, error) {
+  // do something with the error
+  console.log(error);
+}
+
+// perform an ajax http get request
+$.ajax({
+  url: apiURL,
+  async: true,
+  success: successCallback,
+  error: errorCallback
+});
+
+/* let person = [
   {
     id: 1,
     name: "Thiago Tavares",
@@ -29,45 +83,9 @@ let person = [
     name: "João Faustino",
     description: "Faustino description"
   }
-];
+]; */
 
 /* let mainCard = document.querySelector(".main-cards"); */
-
-person.forEach(element => {
-  var card = `<div class="the-cards">
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="../../assets/avatar.jpg" class="card-img" alt="..." />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">${element.name}</h5>
-        <p class="card-text">${element.description.slice(0, 50)}
-        </p>
-        <p class="card-text">
-          <small class="text-muted">    <button id="user${
-            element.id
-          }" class="see-more shadow-none" data-toggle="modal" data-target="#exampleModalCenter">
-          See more...
-        </button></small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>`;
-  $(".main-cards").append(card);
-});
-
-let buttons = $(".see-more");
-console.log(person[1].description);
-
-for (let index = 0; index < buttons.length; index++) {
-  $(`#user${index + 1}`).click(function() {
-    $(".modal-body").text(person[index].description);
-  });
-}
 
 /*buttons.forEach(element => {
   $("#user1").click(function() {
